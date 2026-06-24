@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cr1qdstlmkdcl"]
+
+[ext_resource type="Texture2D" uid="uid://cgq87ph01r72p" path="res://assets/Sprites/HappyFace.png" id="1_yjuyv"]
+[ext_resource type="Script" uid="uid://dbhrgs4as7bl8" path="res://scripts/happy_face.gd" id="2_otpmi"]
+
+[node name="HappyFace" type="Sprite2D" unique_id=1632146014]
+self_modulate = Color(1, 1, 0, 1)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_yjuyv")
+hframes = 2
+script = ExtResource("2_otpmi")

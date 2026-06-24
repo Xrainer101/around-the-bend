@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dc7xsfnk517s4"]
+
+[ext_resource type="PackedScene" uid="uid://bvn154lhofmvc" path="res://scenes/spinner.tscn" id="1_e05a3"]
+[ext_resource type="Script" uid="uid://cs876whl6xkgi" path="res://scripts/spinner_collection.gd" id="1_wl4x5"]
+[ext_resource type="Script" uid="uid://dp36ogg0p62p7" path="res://scripts/camera.gd" id="1_xdvfk"]
+[ext_resource type="PackedScene" uid="uid://cr1qdstlmkdcl" path="res://scenes/happy_face.tscn" id="3_olpmc"]
+
+[node name="Arena" type="Node2D" unique_id=837838389]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1193429524]
+zoom = Vector2(1.5, 1.5)
+script = ExtResource("1_xdvfk")
+
+[node name="SpinnerCollection" type="Node2D" parent="." unique_id=1073506218]
+script = ExtResource("1_wl4x5")
+
+[node name="Spinner3" parent="SpinnerCollection" unique_id=1546856055 instance=ExtResource("1_e05a3")]
+scale = Vector2(2.5, 2.5)
+
+[node name="Spinner2" parent="SpinnerCollection" unique_id=1805383202 instance=ExtResource("1_e05a3")]
+scale = Vector2(1.75, 1.75)
+
+[node name="Spinner" parent="SpinnerCollection" unique_id=1466202440 instance=ExtResource("1_e05a3")]
+
+[node name="HappyFace" parent="." unique_id=1632146014 instance=ExtResource("3_olpmc")]

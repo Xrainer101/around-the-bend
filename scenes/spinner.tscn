@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bvn154lhofmvc"]
+
+[ext_resource type="Texture2D" uid="uid://b1r8wxtemwem" path="res://assets/Sprites/WhiteCircle.png" id="1_kry60"]
+[ext_resource type="Script" uid="uid://4gdip471a1pi" path="res://scripts/spinner.gd" id="2_78gc6"]
+[ext_resource type="AudioStream" uid="uid://cxpdvvvt1tq4y" path="res://assets/SFX/machine-hand-crank.wav" id="3_kry60"]
+[ext_resource type="PackedScene" uid="uid://f7l4s1cbirl6" path="res://scenes/slot.tscn" id="4_beaw0"]
+
+[node name="Spinner" type="Node2D" unique_id=359460507]
+script = ExtResource("2_78gc6")
+
+[node name="CrankSound" type="AudioStreamPlayer2D" parent="." unique_id=145421836]
+stream = ExtResource("3_kry60")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2020386703]
+self_modulate = Color(0.804, 1, 0.482, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_kry60")
+
+[node name="Slots" type="Node2D" parent="." unique_id=530698252]
+
+[node name="Slot" parent="Slots" unique_id=20109357 instance=ExtResource("4_beaw0")]
+position = Vector2(0, -35)
+
+[node name="Slot2" parent="Slots" unique_id=822835718 instance=ExtResource("4_beaw0")]
+position = Vector2(25.000002, -25.000002)
+rotation = 0.7853982
+
+[node name="Slot3" parent="Slots" unique_id=1419868966 instance=ExtResource("4_beaw0")]
+position = Vector2(35, 0)
+rotation = 1.5707964
+
+[node name="Slot4" parent="Slots" unique_id=143972485 instance=ExtResource("4_beaw0")]
+position = Vector2(25, 25)
+rotation = 2.3561945
+
+[node name="Slot5" parent="Slots" unique_id=1865254801 instance=ExtResource("4_beaw0")]
+position = Vector2(0, 35)
+rotation = 3.1415927
+
+[node name="Slot6" parent="Slots" unique_id=1655144235 instance=ExtResource("4_beaw0")]
+position = Vector2(-25, 25)
+rotation = -2.3561945
+
+[node name="Slot7" parent="Slots" unique_id=2147080923 instance=ExtResource("4_beaw0")]
+position = Vector2(-35, 0)
+rotation = -1.5707964
+
+[node name="Slot8" parent="Slots" unique_id=1062402877 instance=ExtResource("4_beaw0")]
+position = Vector2(-25, -25)
+rotation = -0.7853982
