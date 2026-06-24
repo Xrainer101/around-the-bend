@@ -15,7 +15,7 @@ func _ready() -> void:
 	currIndex = spinners.size() - 1
 	currSpinner = spinners[currIndex]
 	currSpinner.sprite.self_modulate = Color(0.0, 1.0, 1.0)
-	print(currIndex)
+	# print(currIndex)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,4 +34,4 @@ func swap_spinner(direction : int):
 	currIndex = clamp(currIndex + direction, 0, spinners.size() - 1)
 	currSpinner = spinners[currIndex]
 	currSpinner.sprite.self_modulate = Color(0.0, 1.0, 1.0)
-	print(currIndex)
+	# print(currIndex)

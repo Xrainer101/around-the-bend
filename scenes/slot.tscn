@@ -1,11 +1,26 @@
 [gd_scene format=3 uid="uid://f7l4s1cbirl6"]
 
-[ext_resource type="Script" uid="uid://4k8lveat1q7d" path="res://scripts/slot.gd" id="1_4v6ba"]
+[ext_resource type="Script" uid="uid://4k8lveat1q7d" path="res://scripts/turret_slot.gd" id="1_4v6ba"]
 
-[node name="Slot" type="Node2D" unique_id=822835718]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0th0j"]
+size = Vector2(26, 12)
+
+[node name="Slot" type="Node2D" unique_id=822835718 groups=["Slots"]]
 script = ExtResource("1_4v6ba")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=322797768]
+position = Vector2(0, 6)
 scale = Vector2(0.15, 0.15)
-color = Color(0.8352941, 0.8352941, 0.8352941, 0.63529414)
-polygon = PackedVector2Array(-130, -80, 130, -80, 60, 80, -60, 80)
+color = Color(0.735, 0.735, 0.735, 0.733)
+polygon = PackedVector2Array(-120, -120, 120, -120, 66.666664, 33.33333, -66.666664, 33.33333)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1797855419 groups=["Slots"]]
+position = Vector2(0, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1706883803]
+shape = SubResource("RectangleShape2D_0th0j")
+debug_color = Color(0.663508, 0.51322645, 7.70092e-07, 0.41960785)
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

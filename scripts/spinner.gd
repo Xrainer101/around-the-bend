@@ -1,3 +1,4 @@
+@icon("res://assets/Sprites/WhiteCircle.png")
 class_name Spinner extends Node2D
 
 @export var target_angle : float = 0.0

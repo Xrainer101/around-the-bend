@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cs876whl6xkgi" path="res://scripts/spinner_collection.gd" id="1_wl4x5"]
 [ext_resource type="Script" uid="uid://dp36ogg0p62p7" path="res://scripts/camera.gd" id="1_xdvfk"]
 [ext_resource type="PackedScene" uid="uid://cr1qdstlmkdcl" path="res://scenes/happy_face.tscn" id="3_olpmc"]
+[ext_resource type="PackedScene" uid="uid://lxqiwbsdbbup" path="res://scenes/walnut.tscn" id="5_7ft05"]
 
 [node name="Arena" type="Node2D" unique_id=837838389]
 
@@ -15,11 +16,14 @@ script = ExtResource("1_xdvfk")
 script = ExtResource("1_wl4x5")
 
 [node name="Spinner3" parent="SpinnerCollection" unique_id=1546856055 instance=ExtResource("1_e05a3")]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2.55, 2.55)
 
 [node name="Spinner2" parent="SpinnerCollection" unique_id=1805383202 instance=ExtResource("1_e05a3")]
-scale = Vector2(1.75, 1.75)
+scale = Vector2(1.65, 1.65)
 
 [node name="Spinner" parent="SpinnerCollection" unique_id=1466202440 instance=ExtResource("1_e05a3")]
 
 [node name="HappyFace" parent="." unique_id=1632146014 instance=ExtResource("3_olpmc")]
+
+[node name="Turret" parent="." unique_id=1557782138 instance=ExtResource("5_7ft05")]
+position = Vector2(-322, -93)

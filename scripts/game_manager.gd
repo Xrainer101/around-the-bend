@@ -1,12 +1,11 @@
-class_name Turret_Slot extends Node2D
+extends Node
 
-var current_turret
-
-@onready var polygon: Polygon2D = $Polygon2D
+enum GameState {SETUP, FIGHT, PAUSE}
+@export var game_state: GameState
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	polygon.color = Color(0.835, 0.835, 0.835, 0.635)
+	game_state = GameState.SETUP
 	pass # Replace with function body.
 
 

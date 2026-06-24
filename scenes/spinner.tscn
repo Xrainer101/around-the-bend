@@ -30,7 +30,7 @@ position = Vector2(35, 0)
 rotation = 1.5707964
 
 [node name="Slot4" parent="Slots" unique_id=143972485 instance=ExtResource("4_beaw0")]
-position = Vector2(25, 25)
+position = Vector2(25.000002, 25.000002)
 rotation = 2.3561945
 
 [node name="Slot5" parent="Slots" unique_id=1865254801 instance=ExtResource("4_beaw0")]
@@ -38,7 +38,7 @@ position = Vector2(0, 35)
 rotation = 3.1415927
 
 [node name="Slot6" parent="Slots" unique_id=1655144235 instance=ExtResource("4_beaw0")]
-position = Vector2(-25, 25)
+position = Vector2(-25.000002, 25.000002)
 rotation = -2.3561945
 
 [node name="Slot7" parent="Slots" unique_id=2147080923 instance=ExtResource("4_beaw0")]
@@ -46,5 +46,5 @@ position = Vector2(-35, 0)
 rotation = -1.5707964
 
 [node name="Slot8" parent="Slots" unique_id=1062402877 instance=ExtResource("4_beaw0")]
-position = Vector2(-25, -25)
+position = Vector2(-25.000002, -25.000002)
 rotation = -0.7853982
