@@ -21,10 +21,11 @@ var bullet_pool : Array[Projectile] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in pool_size:
-		var p : Projectile = projectile.instantiate()
-		bullet_pool.append(p)
-		p.reset_projectile()
+	# for i in pool_size:
+		# var p : Projectile = projectile.instantiate()
+		# bullet_pool.append(p)
+		# p.reset_projectile()
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -63,6 +64,7 @@ func pull_from_pool() -> Projectile:
 	if bullet_pool.is_empty():
 		print("Instantiating")
 		proj = projectile.instantiate()
+		proj.reparent(get_tree().root)
 		proj.attack_component = self
 	else:
 		print("Pulling")
