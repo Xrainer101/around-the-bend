@@ -79,7 +79,8 @@ zoom_out={
 
 [layer_names]
 
-2d_physics/layer_1="Card"
+2d_physics/layer_1="Turrets"
+2d_physics/layer_2="Enemies"
 
 [physics]
 

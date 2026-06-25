@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TurretStats" format=3 uid="uid://bi3nrh85nrq8j"]
+
+[ext_resource type="Script" uid="uid://c3dxce8g36gg2" path="res://scripts/turrets/turret_stats.gd" id="1_2mcni"]
+
+[resource]
+script = ExtResource("1_2mcni")
+name = "Default"
+health = 5
+fire_rate = -1.0

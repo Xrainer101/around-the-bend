@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b1m5bm6plm3bh"]
+
+[ext_resource type="PackedScene" uid="uid://lxqiwbsdbbup" path="res://scenes/turrets/base_turret.tscn" id="1_6wlap"]
+[ext_resource type="PackedScene" uid="uid://7you2br3h6sl" path="res://scenes/components/attack_component.tscn" id="2_00weg"]
+[ext_resource type="PackedScene" uid="uid://drnqc6mrcoxsl" path="res://scenes/projectiles/base_projectile.tscn" id="3_30thi"]
+[ext_resource type="AudioStream" uid="uid://c5xk5gq4mlo3e" path="res://assets/SFX/eaglaxle-gun-shot-1-530788.mp3" id="4_3xa24"]
+
+[node name="BaseShootingTurret" unique_id=1557782138 instance=ExtResource("1_6wlap")]
+
+[node name="AttackComponent" parent="." index="4" unique_id=740832603 node_paths=PackedStringArray("attack_sound") instance=ExtResource("2_00weg")]
+position = Vector2(0, -16)
+projectile = ExtResource("3_30thi")
+attack_sound = NodePath("AttackSound")
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="AttackComponent" index="0" unique_id=1829721843]
+stream = ExtResource("4_3xa24")

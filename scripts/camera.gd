@@ -13,12 +13,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _unhandled_input(event: InputEvent) -> void:
+	# Zoom in with scrolling
 	if event.is_action_pressed("zoom_in"):
 		zoom = Vector2(
 			clamp(zoom.x + zoom_speed, min_zoom, max_zoom),
 			clamp(zoom.y + zoom_speed, min_zoom, max_zoom)
 		)
+	# Zoom out with scrolling
 	elif event.is_action_pressed("zoom_out"):
 		zoom = Vector2(
 			clamp(zoom.x - zoom_speed, min_zoom, max_zoom),

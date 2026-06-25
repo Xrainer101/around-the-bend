@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bbm68ir2pnmbu"]
+
+[ext_resource type="PackedScene" uid="uid://lxqiwbsdbbup" path="res://scenes/turrets/base_turret.tscn" id="1_2lqy2"]
+[ext_resource type="Resource" uid="uid://bg8f7sqnbhx7p" path="res://resources/walnut.tres" id="2_552b8"]
+
+[node name="Walnut" unique_id=1557782138 instance=ExtResource("1_2lqy2")]
+stats = ExtResource("2_552b8")

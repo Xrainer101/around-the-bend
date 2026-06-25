@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://f7l4s1cbirl6"]
 
-[ext_resource type="Script" uid="uid://4k8lveat1q7d" path="res://scripts/turret_slot.gd" id="1_4v6ba"]
+[ext_resource type="Script" uid="uid://4k8lveat1q7d" path="res://scripts/turrets/turret_slot.gd" id="1_4v6ba"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0th0j"]
 size = Vector2(26, 12)

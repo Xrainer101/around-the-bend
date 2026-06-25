@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://drnqc6mrcoxsl"]
+
+[ext_resource type="Script" uid="uid://fou21wsytb2r" path="res://scripts/projectiles/projectile.gd" id="1_kg56o"]
+[ext_resource type="Texture2D" uid="uid://cj2elhhss0ti1" path="res://icon.svg" id="2_msk2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab64n"]
+size = Vector2(128, 128)
+
+[node name="BaseProjectile" type="Area2D" unique_id=1527939328]
+z_index = 5
+script = ExtResource("1_kg56o")
+
+[node name="LifeTimer" type="Timer" parent="." unique_id=658389198]
+wait_time = 2.0
+one_shot = true
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1759267394]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1852683171]
+texture = ExtResource("2_msk2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=997901146]
+shape = SubResource("RectangleShape2D_ab64n")
+debug_color = Color(0.9999997, 0.011760003, 0.052573964, 0.41960785)
+
+[connection signal="timeout" from="LifeTimer" to="." method="_on_timer_timeout"]

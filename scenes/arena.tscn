@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://cs876whl6xkgi" path="res://scripts/spinner_collection.gd" id="1_wl4x5"]
 [ext_resource type="Script" uid="uid://dp36ogg0p62p7" path="res://scripts/camera.gd" id="1_xdvfk"]
 [ext_resource type="PackedScene" uid="uid://cr1qdstlmkdcl" path="res://scenes/happy_face.tscn" id="3_olpmc"]
-[ext_resource type="PackedScene" uid="uid://lxqiwbsdbbup" path="res://scenes/walnut.tscn" id="5_7ft05"]
+[ext_resource type="PackedScene" uid="uid://lxqiwbsdbbup" path="res://scenes/turrets/base_turret.tscn" id="5_7ft05"]
+[ext_resource type="Script" uid="uid://b7dx8uqr00dm6" path="res://scripts/start_fight_button.gd" id="6_4ag8t"]
+[ext_resource type="PackedScene" uid="uid://b1m5bm6plm3bh" path="res://scenes/turrets/base_shooting_turret.tscn" id="6_dpxgc"]
 
 [node name="Arena" type="Node2D" unique_id=837838389]
 
@@ -25,5 +27,23 @@ scale = Vector2(1.65, 1.65)
 
 [node name="HappyFace" parent="." unique_id=1632146014 instance=ExtResource("3_olpmc")]
 
-[node name="Turret" parent="." unique_id=1557782138 instance=ExtResource("5_7ft05")]
-position = Vector2(-322, -93)
+[node name="Turrets" type="Node" parent="." unique_id=2129331831]
+
+[node name="BaseTurret" parent="Turrets" unique_id=1557782138 instance=ExtResource("5_7ft05")]
+position = Vector2(-346, -45)
+
+[node name="BaseShootingTurret" parent="Turrets" unique_id=141753425 instance=ExtResource("6_dpxgc")]
+position = Vector2(-346, 27)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1539524580]
+
+[node name="StartFightButton" type="Button" parent="CanvasLayer" unique_id=2012852101]
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 110.0
+offset_bottom = 43.0
+text = "Start fight
+"
+script = ExtResource("6_4ag8t")
+
+[connection signal="button_down" from="CanvasLayer/StartFightButton" to="CanvasLayer/StartFightButton" method="_on_button_down"]
