@@ -41,6 +41,7 @@ func fire():
 		attack_sound.play()
 	spawn_bullet()
 	for i in burst_fire_rate:
+		# To do: Follow tutorial to shoot bullets
 		pass
 	pass
 
