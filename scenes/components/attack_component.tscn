@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://7you2br3h6sl"]
 
 [ext_resource type="Script" uid="uid://sbcqyy6tdckg" path="res://scripts/components/attack_component.gd" id="1_svtj4"]
+[ext_resource type="PackedScene" uid="uid://drnqc6mrcoxsl" path="res://scenes/projectiles/base_projectile.tscn" id="2_g34tn"]
 
 [node name="AttackComponent" type="Node2D" unique_id=740832603]
 script = ExtResource("1_svtj4")
+projectile = ExtResource("2_g34tn")

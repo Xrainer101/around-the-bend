@@ -4,3 +4,5 @@
 
 [node name="HitBoxComponent" type="Area2D" unique_id=1149855668]
 script = ExtResource("1_ofe5w")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
